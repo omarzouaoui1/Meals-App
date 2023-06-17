@@ -20,7 +20,7 @@ const availableCategories = [
   ),
   Category(
     id: 'c4',
-    title: 'German',
+    title: 'Tunisian',
     color: Colors.amber,
   ),
   Category(
