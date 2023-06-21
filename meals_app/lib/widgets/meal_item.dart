@@ -35,11 +35,13 @@ class MealItem extends StatelessWidget {
       clipBehavior: Clip.hardEdge,
       elevation: 2,
       child: InkWell(
+        //it took us to => Meal Details
         onTap: () {
           onSelectedMeal(meal);
         },
         child: Stack(
           children: [
+            //Meal Img
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
               image: NetworkImage(meal.imageUrl),
@@ -57,6 +59,7 @@ class MealItem extends StatelessWidget {
                     const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
                 child: Column(
                   children: [
+                    //Meal Title
                     Text(
                       meal.title,
                       maxLines: 2,
@@ -73,7 +76,9 @@ class MealItem extends StatelessWidget {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      //Using meal item trait to avoid writing each time the size of icon and text ...
                       children: [
+                        //Duration
                         MealItemTrait(
                           icon: Icons.schedule_rounded,
                           label: '${meal.duration} min',
@@ -81,10 +86,12 @@ class MealItem extends StatelessWidget {
                         const SizedBox(
                           width: 13,
                         ),
+                        //Complexity
                         MealItemTrait(
                           icon: Icons.work,
                           label: complexityText,
                         ),
+                        //Afoordability
                         MealItemTrait(
                           icon: Icons.attach_money_outlined,
                           label: affordabilityText,

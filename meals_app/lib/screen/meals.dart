@@ -6,15 +6,19 @@ import 'package:meals_app/widgets/meal_item.dart';
 class MealsScreen extends StatelessWidget {
   const MealsScreen({
     super.key,
-    required this.title,
+    this.title,
     required this.meals,
   });
 
-  final String title;
+  //Category title
+  final String? title;
+  //List of meals of this category
   final List<Meal> meals;
 
+  //seletedMEal to see more details about it
   void selectedMeal(BuildContext context, Meal meal) {
-    Navigator.of(context).push(
+    Navigator.push(
+      context,
       MaterialPageRoute(
         builder: (ctx) => MealDetailsScreen(meal: meal),
       ),
@@ -23,7 +27,10 @@ class MealsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //widget content
+    //Initial widget
     Widget content = Center(
+      //Empty List
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -42,9 +49,12 @@ class MealsScreen extends StatelessWidget {
       ),
     );
 
+    //If meals List containes elements
     if (meals.isNotEmpty) {
       content = ListView.builder(
         itemCount: meals.length,
+        //Rendring Meal Item while passing each meal by index and onselected Meal
+        //ItemBuilder
         itemBuilder: (ctx, index) => MealItem(
           meal: meals[index],
           onSelectedMeal: (meal) {
@@ -53,10 +63,16 @@ class MealsScreen extends StatelessWidget {
         ),
       );
     }
+
+    if (title == null) {
+      return content;
+    }
     return Scaffold(
       appBar: AppBar(
-        title: Text(title),
+        //Category Title
+        title: Text(title!),
       ),
+      //our content Widget
       body: content,
     );
   }

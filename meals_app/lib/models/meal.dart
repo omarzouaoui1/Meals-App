@@ -1,15 +1,18 @@
+//enum of the complexity
 enum Complexity {
   simple,
   challenging,
   hard,
 }
 
+//enum of affordability
 enum Affordability {
   affordable,
   pricey,
   luxurious,
 }
 
+//Meal Class
 class Meal {
   const Meal({
     required this.id,
@@ -27,6 +30,7 @@ class Meal {
     required this.isVegetarian,
   });
 
+//meal model
   final String id;
   final List<String> categories;
   final String title;
