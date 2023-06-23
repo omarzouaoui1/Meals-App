@@ -47,6 +47,7 @@ class MealsScreen extends StatelessWidget {
           ),
           Text(
             'Try selecting another category ...',
+            textAlign: TextAlign.center,
             style: Theme.of(context)
                 .textTheme
                 .headlineLarge!
