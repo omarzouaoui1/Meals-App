@@ -10,17 +10,17 @@ const availableCategories = [
   Category(
     id: 'c1',
     title: 'Italian',
-    color: Color.fromARGB(255, 99, 192, 235),
+    color: Color.fromARGB(255, 154, 22, 167),
   ),
   Category(
     id: 'c2',
     title: 'Quick & Easy',
-    color: Color.fromARGB(255, 239, 255, 20),
+    color: Color.fromARGB(255, 240, 47, 47),
   ),
   Category(
     id: 'c3',
     title: 'Hamburgers',
-    color: Color.fromARGB(255, 245, 30, 30),
+    color: Color.fromARGB(255, 245, 109, 30),
   ),
   Category(
     id: 'c4',
@@ -35,7 +35,7 @@ const availableCategories = [
   Category(
     id: 'c6',
     title: 'Exotic',
-    color: Color.fromARGB(255, 64, 240, 70),
+    color: Color.fromARGB(255, 62, 180, 47),
   ),
   Category(
     id: 'c7',
@@ -45,7 +45,7 @@ const availableCategories = [
   Category(
     id: 'c8',
     title: 'Asian',
-    color: Color.fromARGB(255, 63, 255, 175),
+    color: Color.fromARGB(255, 41, 216, 18),
   ),
   Category(
     id: 'c9',
